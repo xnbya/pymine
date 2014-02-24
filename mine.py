@@ -169,13 +169,13 @@ while(not ended):
     #conprint(lstoflsts)
     #print(lstoflsts)    
     char = stdscr.getch()
-    if(char == curses.KEY_UP and up > 1):
+    if((char == curses.KEY_UP or char==107) and up > 1):
         up -=1          
-    elif(char==curses.KEY_DOWN and up < gridsize):
+    elif((char==curses.KEY_DOWN or char==106) and up < gridsize):
         up += 1        
-    elif(char==curses.KEY_LEFT and across > 1):
+    elif((char==curses.KEY_LEFT or char==104) and across > 1):
         across -= 1
-    elif(char==curses.KEY_RIGHT and across < gridsize):
+    elif((char==curses.KEY_RIGHT or char==108) and across < gridsize):
         across += 1
     elif(char==32):
         checksquare(up,across)     
